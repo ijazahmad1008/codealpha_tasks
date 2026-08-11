@@ -3,141 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ijaz Ahmed | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>iOS Style Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="nav-container">
-            <h1 class="logo">Ijaz<span>Ahmed</span></h1>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-operand" data-previous-operand></div>
+            <div class="current-operand" data-current-operand>0</div>
         </div>
-    </nav>
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="btn btn-light-gray" data-action="clear">AC</button>
+            <button class="btn btn-light-gray" data-action="toggle-sign">+/-</button>
+            <button class="btn btn-light-gray" data-action="percent">%</button>
+            <button class="btn btn-orange" data-action="divide">/</button>
 
-    <section id="home" class="hero">
-        <div class="hero-content fade-in">
-            <p class="greeting">Hello, I'm</p>
-            <h1 class="name">Ijaz Ahmed</h1>
-            <h2 class="title">Software Engineering Student & Full Stack Enthusiast</h2>
-            <p class="bio">Passionate about web development in an AI-driven world. Future tech founder.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn">View My Work</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
+            <!-- Row 2 -->
+            <button class="btn btn-dark-gray num" data-number="7">7</button>
+            <button class="btn btn-dark-gray num" data-number="8">8</button>
+            <button class="btn btn-dark-gray num" data-number="9">9</button>
+            <button class="btn btn-orange" data-action="multiply">x</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-dark-gray num" data-number="4">4</button>
+            <button class="btn btn-dark-gray num" data-number="5">5</button>
+            <button class="btn btn-dark-gray num" data-number="6">6</button>
+            <button class="btn btn-orange" data-action="subtract">-</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-dark-gray num" data-number="1">1</button>
+            <button class="btn btn-dark-gray num" data-number="2">2</button>
+            <button class="btn btn-dark-gray num" data-number="3">3</button>
+            <button class="btn btn-orange" data-action="add">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-dark-gray btn-zero num" data-number="0">0</button>
+            <button class="btn btn-dark-gray num" data-number=".">.</button>
+            <button class="btn btn-orange" data-action="calculate">=</button>
         </div>
-    </section>
-
-    <section id="about" class="section bg-alt">
-        <h2 class="section-title fade-in">About Me</h2>
-        <div class="about-content fade-in">
-            <div class="about-text">
-                <p>I am an undergraduate Software Engineering student at the <strong>Institute of Space Technology, Islamabad</strong>.</p>
-                <p>While the world rapidly shifts towards Artificial Intelligence, I found my true calling in Web Development. My journey actually began as a biology student in the 10th grade, but my fascination with computers quickly took over and ignited a deep passion for software engineering.</p>
-                <p>Today, I love crafting web applications. My future target is to become a highly skilled <strong>Full Stack Web Developer</strong> and, ultimately, to build my own company from the ground up.</p>
-                <a href="#contact" class="btn primary-btn mt-2">Get In Touch</a>
-            </div>
-            <div class="about-image">
-                <!-- Profile Image -->
-                <img src="./WhatsApp Image 2026-07-02 at 01.11.23 (1).jpeg" alt="Ijaz Ahmed" class="profile-img">
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section">
-        <h2 class="section-title fade-in">Education</h2>
-        <div class="skills-grid fade-in">
-            <div class="skill-card">
-                <h3>Undergraduate</h3>
-                <p><strong>Institute of Space Technology, Islamabad</strong></p>
-                <p style="color: var(--accent); font-weight: 600; margin-top: 5px;">BS Software Engineering (Current)</p>
-            </div>
-            <div class="skill-card">
-                <h3>Intermediate</h3>
-                <p><strong>Government Associate College, Umerkot</strong></p>
-                <p style="color: var(--accent); font-weight: 600; margin-top: 5px;">Punjab - 86% Marks</p>
-            </div>
-            <div class="skill-card">
-                <h3>Matriculation</h3>
-                <p><strong>Government Boys High School, Bhagsar</strong></p>
-                <p style="color: var(--accent); font-weight: 600; margin-top: 5px;">Punjab - 88% Marks</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-alt">
-        <h2 class="section-title fade-in">My Projects</h2>
-        <div class="projects-grid fade-in">
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>Future Skills Hub</h3>
-                    <p>An educational platform designed to empower students with modern skills.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>Inventory Sale Management System</h3>
-                    <p>A comprehensive system for tracking sales and managing inventory effectively.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>AI Tool for Students</h3>
-                    <p>An intelligent tool to assist students in their daily academic tasks and learning.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>Qty Calculator</h3>
-                    <p>A specialized calculator application for rapid and accurate quantity estimations.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>AI based Game System</h3>
-                    <p>A gaming ecosystem integrating artificial intelligence for dynamic gameplay.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info" style="height: 100%;">
-                    <h3>Real Estate Property App</h3>
-                    <p>A web application for browsing, listing, and managing real estate properties.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2 class="section-title fade-in">Contact Info</h2>
-        <div class="contact-content fade-in" style="max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left;">
-            <div>
-                <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.8rem;">Let's Connect</h3>
-                <p style="margin-bottom: 0.5rem; color: white;"><strong>Email:</strong> ijazahmed141926@gmail.com</p>
-                <p style="margin-bottom: 0.5rem; color: white;"><strong>Phone 1:</strong> 0337 466 40 48</p>
-                <p style="margin-bottom: 1.5rem; color: white;"><strong>Phone 2:</strong> 0330 4875922</p>
-                <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-            </div>
-            <div>
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message functionality coming soon!');">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn primary-btn" style="width: 100%;">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Ijaz Ahmed. Aspiring Full Stack Engineer.</p>
-    </footer>
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
